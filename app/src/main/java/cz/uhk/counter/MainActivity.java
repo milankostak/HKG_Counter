@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         countA += points;
         textViewA.setText(Integer.toString(countA));
     }
+
     private void initBButtons() {
         Button buttonB3 = (Button) findViewById(R.id.buttonB3);
         buttonB3.setOnClickListener(new OnClickListener() {
