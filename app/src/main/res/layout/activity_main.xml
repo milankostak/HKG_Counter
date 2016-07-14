@@ -30,7 +30,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
-                android:text="0"
+                android:text="@string/zero"
                 android:textColor="@color/teamA"
                 android:textSize="45sp" />
 
@@ -38,19 +38,19 @@
                 android:id="@+id/buttonA3"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="+3" />
+                android:text="@string/plus3" />
 
             <Button
                 android:id="@+id/buttonA2"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="+2" />
+                android:text="@string/plus2" />
 
             <Button
                 android:id="@+id/buttonA1"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="+1" />
+                android:text="@string/plus1" />
 
             <EditText
                 android:id="@+id/inputPointsA"
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:ems="10"
-                android:hint="add points"
+                android:hint="@string/add_points_placeholder"
                 android:inputType="number"
                 android:textColor="@color/teamA"
                 android:textColorHint="@color/teamA" />
@@ -67,7 +67,7 @@
                 android:id="@+id/addA"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="Add" />
+                android:text="@string/add" />
 
         </LinearLayout>
 
@@ -87,7 +87,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
-                android:text="0"
+                android:text="@string/zero"
                 android:textColor="@color/teamB"
                 android:textSize="45sp" />
 
@@ -95,19 +95,19 @@
                 android:id="@+id/buttonB3"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="+3" />
+                android:text="@string/plus3" />
 
             <Button
                 android:id="@+id/buttonB2"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="+2" />
+                android:text="@string/plus2" />
 
             <Button
                 android:id="@+id/buttonB1"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="+1" />
+                android:text="@string/plus1" />
 
 
             <EditText
@@ -116,7 +116,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:ems="10"
-                android:hint="add points"
+                android:hint="@string/add_points_placeholder"
                 android:inputType="number"
                 android:textColor="@color/teamB"
                 android:textColorHint="@color/teamB" />
@@ -125,12 +125,12 @@
                 android:id="@+id/addB"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="Add" />
+                android:text="@string/add" />
         </LinearLayout>
     </LinearLayout>
     <Button
         android:id="@+id/reset"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Reset" />
+        android:text="@string/reset" />
 </LinearLayout>
