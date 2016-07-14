@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     private int countA = 0;
     private int countB = 0;
-    private static final int MAX_ADD = 1000;
+    private final int MAX_ADD = 1000;
     private TextView textViewA;
     private TextView textViewB;
     private EditText editTextA;
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         initAButtons();
         initBButtons();
         initAddButtons();
+        initReset();
     }
 
     private void initComponents() {
@@ -97,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String value = editTextA.getText().toString();
                 addToTeamA(checkInsertedValue(value));
+                editTextA.setText("");
             }
         });
         Button addB = (Button) findViewById(R.id.addB);
@@ -104,22 +106,45 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String value = editTextB.getText().toString();
                 addToTeamB(checkInsertedValue(value));
+                editTextB.setText("");
             }
         });
     }
 
     private int checkInsertedValue(String value) {
-        int val = Integer.parseInt(value);
-        if (val > MAX_ADD) {
-            Toast.makeText(MainActivity.this, "Insert less than " + MAX_ADD + "!",
-                    Toast.LENGTH_LONG).show();
-            return 0;
-        } else if (countA > Integer.MAX_VALUE - val) {
-            Toast.makeText(MainActivity.this, "Cannot add anymore points!",
+        if ("".equals(value)) {
+            Toast.makeText(MainActivity.this, "You have to insert some number!",
                     Toast.LENGTH_LONG).show();
             return 0;
         } else {
-            return val;
+            int val = Integer.parseInt(value);
+            if (val > MAX_ADD) {
+                Toast.makeText(MainActivity.this, "Insert less than " + MAX_ADD + "!",
+                        Toast.LENGTH_LONG).show();
+                return 0;
+            } else if (countA > Integer.MAX_VALUE - val) {
+                Toast.makeText(MainActivity.this, "Cannot add anymore points!",
+                        Toast.LENGTH_LONG).show();
+                return 0;
+            } else {
+                return val;
+            }
         }
+    }
+
+    private void initReset() {
+        Button resetButton = (Button) findViewById(R.id.reset);
+        resetButton.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                reset();
+            }
+        });
+    }
+
+    private void reset() {
+        countA = 0;
+        addToTeamA(0);
+        countB = 0;
+        addToTeamB(0);
     }
 }
