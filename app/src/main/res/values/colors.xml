@@ -3,6 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="teamA">#33b5e5</color>
+    <color name="teamA">#49a33f</color>
     <color name="teamB">#ff4444</color>
+    <color name="bg">#b8cce2</color>
 </resources>
