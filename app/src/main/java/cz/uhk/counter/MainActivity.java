@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
     private int checkInsertedValue(String value) {
         if ("".equals(value)) {
-            Toast.makeText(MainActivity.this, "You have to insert some number!",
+            Toast.makeText(MainActivity.this, R.string.insert_number,
                     Toast.LENGTH_LONG).show();
             return 0;
         } else {
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.LENGTH_LONG).show();
                 return 0;
             } else if (countA > Integer.MAX_VALUE - val) {
-                Toast.makeText(MainActivity.this, "Cannot add anymore points!",
+                Toast.makeText(MainActivity.this, R.string.anymore_points,
                         Toast.LENGTH_LONG).show();
                 return 0;
             } else {

@@ -7,4 +7,7 @@
     <string name="plus2">+2</string>
     <string name="plus3">+3</string>
     <string name="add_points_placeholder">add points</string>
+    <string name="insert_number">You have to insert some number!</string>
+    <string name="anymore_points">Cannot add anymore points!</string>
+
 </resources>
