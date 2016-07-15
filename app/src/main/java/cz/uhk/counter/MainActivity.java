@@ -120,7 +120,8 @@ public class MainActivity extends AppCompatActivity {
         } else {
             int val = Integer.parseInt(value);
             if (val > MAX_ADD) {
-                Toast.makeText(MainActivity.this, "Insert less than " + MAX_ADD + "!",
+                String insert_less = getString(R.string.insert_less, MAX_ADD);
+                Toast.makeText(MainActivity.this, insert_less,
                         Toast.LENGTH_LONG).show();
                 return 0;
             } else if (countA > Integer.MAX_VALUE - val) {
